@@ -1,26 +1,29 @@
-def calcular_rankeamento(vitorias, derrotas):
-    saldo = vitorias - derrotas
+function calcularRankeamento(vitorias, derrotas) {
+    const saldo = vitorias - derrotas;
+    let nivel;
 
-    if vitorias < 10:
-        nivel = "Ferro"
-    elif 10 <= vitorias <= 20:
-        nivel = "Bronze"
-    elif 21 <= vitorias <= 50:
-        nivel = "Prata"
-    elif 51 <= vitorias <= 80:
-        nivel = "Ouro"
-    elif 81 <= vitorias <= 90:
-        nivel = "Diamante"
-    elif 91 <= vitorias <= 100:
-        nivel = "Lendário"
-    else:
-        nivel = "Imortal"
+    if (vitorias < 10) {
+        nivel = "Ferro";
+    } else if (vitorias >= 10 && vitorias <= 20) {
+        nivel = "Bronze";
+    } else if (vitorias >= 21 && vitorias <= 50) {
+        nivel = "Prata";
+    } else if (vitorias >= 51 && vitorias <= 80) {
+        nivel = "Ouro";
+    } else if (vitorias >= 81 && vitorias <= 90) {
+        nivel = "Diamante";
+    } else if (vitorias >= 91 && vitorias <= 100) {
+        nivel = "Lendário";
+    } else {
+        nivel = "Imortal";
+    }
 
-    return saldo, nivel
+    return { saldo, nivel };
+}
 
-# Exemplo de uso da função
-vitorias = 85
-derrotas = 20
-saldoVitorias, nivel = calcular_rankeamento(vitorias, derrotas)
+// Exemplo de uso da função
+const vitorias = 85;
+const derrotas = 20;
+const { saldo, nivel } = calcularRankeamento(vitorias, derrotas);
 
-print(f"O Herói tem saldo de {saldoVitorias} está no nível de {nivel}")
+console.log(`O Herói tem saldo de ${saldo} está no nível de ${nivel}`);
