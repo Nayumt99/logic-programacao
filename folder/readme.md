@@ -28,10 +28,6 @@ O desafio pode ser implementado em qualquer linguagem de programação, mas nest
 4. **Saída:**
    - Exibir uma mensagem indicando o nome do herói e seu nível correspondente.
 
-## Exemplos de Implementação
-
-- **Python:** [Veja o exemplo em Python](desafio_heroi.py)
-- **JavaScript:** [Veja o exemplo em JavaScript](desafio_heroi.js)
 
 ## Contribuindo
 
